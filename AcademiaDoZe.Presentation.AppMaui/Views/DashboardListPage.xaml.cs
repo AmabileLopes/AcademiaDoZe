@@ -1,8 +1,5 @@
 using AcademiaDoZe.Presentation.AppMaui.ViewModels;
-using Microsoft.Maui.Controls;
-
 namespace AcademiaDoZe.Presentation.AppMaui.Views;
-
 public partial class DashboardListPage : ContentPage
 {
     public DashboardListPage(DashboardListViewModel viewModel)
@@ -10,8 +7,6 @@ public partial class DashboardListPage : ContentPage
         InitializeComponent();
         BindingContext = viewModel;
     }
-  
-
     protected override async void OnAppearing()
     {
         base.OnAppearing();

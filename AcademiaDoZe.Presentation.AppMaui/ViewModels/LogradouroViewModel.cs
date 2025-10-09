@@ -52,7 +52,6 @@ namespace AcademiaDoZe.Presentation.AppMaui.ViewModels
             _logradouroService = logradouroService;
             Title = "Detalhes do Logradouro";
         }
-        // Incluir os Métodos aqui
         public async Task InitializeAsync()
         {
             if (LogradouroId > 0)
@@ -165,7 +164,6 @@ namespace AcademiaDoZe.Presentation.AppMaui.ViewModels
                 IsBusy = false;
             }
         }
-
         private static bool ValidateLogradouro(LogradouroDTO logradouro)
         {
             const string validationTitle = "Validação";

@@ -24,8 +24,6 @@ namespace AcademiaDoZe.Presentation.AppMaui.ViewModels
             _logradouroService = logradouroService;
             Title = "Logradouros";
         }
-        // Incluir os Métodos com [RelayCommand]
-
         [RelayCommand]
         private async Task AddLogradouroAsync()
         {
@@ -164,6 +162,7 @@ namespace AcademiaDoZe.Presentation.AppMaui.ViewModels
                 IsRefreshing = false;
             }
         }
+
         [RelayCommand]
         private async Task DeleteLogradouroAsync(LogradouroDTO logradouro)
         {
@@ -199,5 +198,6 @@ namespace AcademiaDoZe.Presentation.AppMaui.ViewModels
                 IsBusy = false;
             }
         }
+
     }
 }

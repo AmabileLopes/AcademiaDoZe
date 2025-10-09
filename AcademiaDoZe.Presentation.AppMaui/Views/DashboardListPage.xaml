@@ -1,9 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="AcademiaDoZe.Presentation.AppMaui.Views.DashboardListPage"
 xmlns:vm="clr-namespace:AcademiaDoZe.Presentation.AppMaui.ViewModels"
 x:DataType="vm:DashboardListViewModel"
-             
 Title="{Binding Title}">
     <ScrollView>
         <Grid RowDefinitions="Auto,*">
@@ -12,7 +12,7 @@ Title="{Binding Title}">
             <StackLayout Spacing="10" Margin="0,0,0,20">
 
                 <Image Source="academiadoze.png" HorizontalOptions="Center" VerticalOptions="Start" HeightRequest="200" WidthRequest="200"/>
-                <Label Text="Academia do Zé" Style="{StaticResource Headline}"/>
+                <Label Text="Academia da Amabile" Style="{StaticResource Headline}"/>
                 <Label Text="Sistema de Gerenciamento" Style="{StaticResource SubHeadline}"/>
             </StackLayout>
             <!-- Cards Container -->
@@ -67,7 +67,6 @@ Title="{Binding Title}">
                         <Label Text="Matrículas" HorizontalTextAlignment="Center"/>
                     </StackLayout>
                 </Border>
-
             </Grid>
             <!-- Loading Indicator -->
 

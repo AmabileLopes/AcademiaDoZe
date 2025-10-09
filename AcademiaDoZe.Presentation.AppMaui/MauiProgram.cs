@@ -12,7 +12,7 @@ namespace AcademiaDoZe.Presentation.AppMaui
             builder
             .UseMauiApp<App>()
             .ConfigureFonts(fonts =>
-            {
+            {  fonts.AddFont("MaterialIcons-Regular.ttf", "MaterialIcons");
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
@@ -27,6 +27,7 @@ namespace AcademiaDoZe.Presentation.AppMaui
             builder.Services.AddTransient<DashboardListPage>();
             builder.Services.AddTransient<LogradouroListPage>();
             builder.Services.AddTransient<LogradouroPage>();
+            builder.Services.AddTransient<ConfigPage>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
