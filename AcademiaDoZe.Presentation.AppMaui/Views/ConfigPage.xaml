@@ -14,13 +14,11 @@ Title="Configurações">
                     <StackLayout Spacing="5">
                         <Label Text="Tema" />
                         <Picker x:Name="TemaPicker">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>light</x:String>
-                                    <x:String>dark</x:String>
-                                    <x:String>system</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
+                            <Picker.Items>
+                                <x:String>light</x:String>
+                                <x:String>dark</x:String>
+                                <x:String>system</x:String>
+                            </Picker.Items>
                         </Picker>
                     </StackLayout>
                     <Grid ColumnDefinitions="*,*" ColumnSpacing="10">

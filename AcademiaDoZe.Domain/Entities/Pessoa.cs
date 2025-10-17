@@ -27,6 +27,7 @@ namespace AcademiaDoZe.Domain.Entities
         Arquivo foto) : base()
 
         {
+            Id = id;
             Nome = nome;
             Cpf = cpf;
             DataNascimento = dataNascimento;
