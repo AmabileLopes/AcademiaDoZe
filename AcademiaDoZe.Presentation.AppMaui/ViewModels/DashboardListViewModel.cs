@@ -67,7 +67,6 @@ namespace AcademiaDoZe.Presentation.AppMaui.ViewModels
 
 
    
-                TotalAlunos = 0;
  
                 TotalMatriculas = 0;
 
