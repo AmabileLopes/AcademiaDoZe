@@ -10,30 +10,41 @@ Title="Academia do Zé">
 -->
     <FlyoutItem Title="Dashboard">
         <FlyoutItem.Icon>
-            <FontImageSource FontFamily="MaterialIcons" Glyph="&#xe5d2;" />
+            <FontImageSource FontFamily="MaterialIcons" Glyph="&#xe5d2;" Color="{AppThemeBinding Light={StaticResource MidnightBlue},Dark={StaticResource White}}"/>
         </FlyoutItem.Icon>
         <ShellContent ContentTemplate="{DataTemplate views:DashboardListPage}" Route="dashboard" />
     </FlyoutItem>
     <FlyoutItem Title="Logradouros">
         <FlyoutItem.Icon>
-            <FontImageSource FontFamily="MaterialIcons" Glyph="&#xe7f1;" />
+            <FontImageSource FontFamily="MaterialIcons" Glyph="&#xe7f1;" Color="{AppThemeBinding Light={StaticResource MidnightBlue},Dark={StaticResource White}}" />
         </FlyoutItem.Icon>
         <ShellContent ContentTemplate="{DataTemplate views:LogradouroListPage}" Route="logradouros" />
     </FlyoutItem>
      <FlyoutItem Title="Colaboradores">
         <FlyoutItem.Icon>
-            <FontImageSource FontFamily="MaterialIcons" Glyph="&#xe8f9;" />
+            <FontImageSource FontFamily="MaterialIcons" Glyph="&#xe8f9;" Color="{AppThemeBinding Light={StaticResource MidnightBlue},Dark={StaticResource White}}"/>
         </FlyoutItem.Icon>
         <ShellContent ContentTemplate="{DataTemplate views:ColaboradorListPage}" Route="colaboradores" />
     </FlyoutItem>
 
     <FlyoutItem Title="Alunos">
         <FlyoutItem.Icon>
-            <FontImageSource FontFamily="MaterialIcons" Glyph="&#xe5d2;" />
+            <FontImageSource FontFamily="MaterialIcons" Glyph="&#xe5d2;" Color="{AppThemeBinding Light={StaticResource MidnightBlue},Dark={StaticResource White}}"/>
         </FlyoutItem.Icon>
         <ShellContent ContentTemplate="{DataTemplate views:AlunoListPage}" Route="alunos" />
     </FlyoutItem>
     
+    <FlyoutItem Title="Matriculas">
+        <FlyoutItem.Icon>
+            <FontImageSource 
+                FontFamily="MaterialIcons" 
+                Glyph="&#xe80c;"
+                Size="24"
+                Color="{AppThemeBinding Light={StaticResource MidnightBlue},Dark={StaticResource White}}" />
+        </FlyoutItem.Icon>
+        <ShellContent ContentTemplate="{DataTemplate views:MatriculaListPage}" Route="matriculas" />
+    </FlyoutItem>
+
     <FlyoutItem Title="Configurações">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="MaterialIcons" Glyph="&#xe869;" />

@@ -116,6 +116,26 @@ namespace AcademiaDoZe.Infrastructure.Repositories
 
         }
 
+        public async Task<Matricula> ObterPorAlunoCpf(string cpf)
+        {
+            try
+            {
+                await using var connection = await GetOpenConnectionAsync();
+                string query = $"select m.* from {TableName}" +
+                               $" m inner join tb_aluno a on m.aluno_id = a.id_aluno " +
+                               $"where cpf Like @CPF;";
+                await using var command = DbProvider.CreateCommand(query, connection);
+                command.Parameters.Add(DbProvider.CreateParameter("@CPF", cpf + "%", DbType.String, _databaseType));
+                await using var reader = await command.ExecuteReaderAsync();
+                return await reader.ReadAsync() ? await MapAsync(reader) : null;
+
+            }
+            catch (DbException ex)
+            {
+                throw new InvalidOperationException($"Erro ao obter matricula por aluno com CPF {cpf}: {ex.Message}", ex);
+            }
+        }
+
         public async Task<IEnumerable<Matricula>> ObterAtivas(int idAluno = 0)
         {
             try

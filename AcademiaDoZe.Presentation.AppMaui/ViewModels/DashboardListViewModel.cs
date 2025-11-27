@@ -7,7 +7,7 @@ namespace AcademiaDoZe.Presentation.AppMaui.ViewModels
         private readonly ILogradouroService _logradouroService;
         private readonly IAlunoService _alunoService;
         private readonly IColaboradorService _colaboradorService;
-        //private readonly IMatriculaService _matriculaService;
+        private readonly IMatriculaService _matriculaService;
 
         private int _totalLogradouros;
         public int TotalLogradouros { get => _totalLogradouros; set => SetProperty(ref _totalLogradouros, value); }
@@ -19,12 +19,12 @@ namespace AcademiaDoZe.Presentation.AppMaui.ViewModels
         public int TotalMatriculas { get => _totalMatriculas; set => SetProperty(ref _totalMatriculas, value); }
 
         //IAlunoService alunoService; //, IMatriculaService matriculaService
-        public DashboardListViewModel(ILogradouroService logradouroService, IAlunoService alunoService, IColaboradorService colaboradorService)
+        public DashboardListViewModel(ILogradouroService logradouroService, IAlunoService alunoService, IColaboradorService colaboradorService, IMatriculaService matriculaService)
         {
             _logradouroService = logradouroService;
             _alunoService = alunoService;
             _colaboradorService = colaboradorService;
-            //_matriculaService = matriculaService;
+            _matriculaService = matriculaService;
             Title = "Dashboard";
         }
         
@@ -58,17 +58,17 @@ namespace AcademiaDoZe.Presentation.AppMaui.ViewModels
                 TotalColaboradores = colaboradores.Count;
                 
                 
-                //var matriculasTask = _matriculaService.ObterTodasAsync();
-                //var matriculas = new List<object>();
-                //try { matriculas = (await matriculasTask).ToList<object>(); }
-                //catch (Exception ex) { await Shell.Current.DisplayAlert("Erro", $"Erro ao carregar matrículas: {ex.Message}", "OK"); }
-                //TotalMatriculas = matriculas.Count;
+                var matriculasTask = _matriculaService.ObterTodasAsync();
+                var matriculas = new List<object>();
+                try { matriculas = (await matriculasTask).ToList<object>(); }
+                catch (Exception ex) { await Shell.Current.DisplayAlert("Erro", $"Erro ao carregar matrículas: {ex.Message}", "OK"); }
+                TotalMatriculas = matriculas.Count;
                 
 
 
    
  
-                TotalMatriculas = 0;
+                //TotalMatriculas = 0;
 
             }
             finally

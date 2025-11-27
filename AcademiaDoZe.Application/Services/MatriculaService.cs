@@ -69,6 +69,14 @@ public class MatriculaService : IMatriculaService
         return (matricula != null) ? matricula.ToDto() : null!;
 
     }
+    public async Task<MatriculaDTO> ObterPorAlunoCpfAsync(string cpf)
+    {
+        // Não existe o método ObterPorAlunoCpf no IMatriculaRepository.
+        // Você pode buscar todas as matrículas e filtrar pelo CPF do aluno.
+        var matriculas = await _repoFactory().ObterTodos();
+        var matricula = matriculas.FirstOrDefault(m => m.AlunoMatricula.Cpf == cpf);
+        return (matricula != null) ? matricula.ToDto() : null!;
+    }
 
     public async Task<IEnumerable<MatriculaDTO>> ObterTodasAsync()
     {
